@@ -1,10 +1,12 @@
 @charset "UTF-8";
+
 * {
     box-sizing: border-box;
     padding: 0px;
     margin-left: 0px;
     margin-right: 0px;
 }
-.practice{
+
+.practice {
     color: aqua;
 }
