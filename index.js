@@ -20,3 +20,20 @@ console.log(aiue);
 // ちなみにStringをしようしないと\nのところで改行されて出力される
 const ue = "C:\Users\node\index.js";
 console.log(ue);
+
+
+
+//newオブジェクトを使用してインスタンスを作成し、様々なデータを埋め込みたい。
+//Objectのインスタンスを作成して、変数myObjに格納
+let myObj = new Object();
+
+//インスタンス「myObj」どんどんデータを追加していく
+myObj.name = "雄大";
+myObj.age = 27;
+
+console.log(myObj);
+
+
+
+
+// 基本的に、全てのオブジェクトはconstructerプロパティを持っている
