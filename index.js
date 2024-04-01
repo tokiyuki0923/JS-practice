@@ -36,4 +36,11 @@ console.log(myObj);
 //thisという変数を使ってみる。expected output:Window {stop: function, open: function, alert: function…}
 console.log(this);
 
+//expected output: "こんにちは"
+this.sample = "こんにちは";
+console.log(window.sample);
+//この状態のthisに文字列を追加するということはwindowオブジェクトに文字列を追加するということになる
+
+
+
 // 基本的に、全てのオブジェクトはconstructerプロパティを持っている
