@@ -91,3 +91,9 @@ console.log("theTree.constructor is" + theTree.constructor);
 const mojiretsu = "I want to play final fantasy7 rebirth. But I have no money to buy."
 
 console.log(`${mojiretsu} ${mojiretsu.length}`);
+
+
+// 変数名mojiretsuの5番目の文字を出力したい。 expected output:t
+let index = 5
+
+console.log(`An index of ${index} returns the character ${mojiretsu.at(index)}`);
