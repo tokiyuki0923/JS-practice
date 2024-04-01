@@ -105,3 +105,7 @@ console.log(`An index of ${index} returns the character ${mojiretsu.at(index)}`)
 // 変数名mojiretsuの8番目の文字を出力したい。expected output:o（さっきとの違いが全くわからん。こっちの方が若干短いだけ）
 index = 8
 console.log(`The character at index ${index} is ${mojiretsu.charAt(index)}`);
+
+//変数名mojiretsuの3番目の文字のUTF-16コードを10進数で表した数字を出力する。　expected output:97（aのUTF-16コードを10進数で表した数字）
+index = 3
+console.log(`Character code ${mojiretsu.charCodeAt(index)} is equal to ${mojiretsu.charAt(index,)}`,);
