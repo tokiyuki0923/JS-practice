@@ -109,3 +109,8 @@ console.log(`The character at index ${index} is ${mojiretsu.charAt(index)}`);
 //変数名mojiretsuの3番目の文字のUTF-16コードを10進数で表した数字を出力する。　expected output:97（aのUTF-16コードを10進数で表した数字）
 index = 3
 console.log(`Character code ${mojiretsu.charCodeAt(index)} is equal to ${mojiretsu.charAt(index,)}`,);
+
+
+// 変数名iconの文字列の2番目のUnicodeコードポイント値を10進数で表した数字を出力したい。expected output:9675
+let icon = "☆○";
+console.log(icon.codePointAt(1));
