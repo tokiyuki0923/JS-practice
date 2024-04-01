@@ -97,3 +97,7 @@ console.log(`${mojiretsu} ${mojiretsu.length}`);
 let index = 5
 
 console.log(`An index of ${index} returns the character ${mojiretsu.at(index)}`);
+
+// 変数名mojiretsuの後ろから3番目の文字を出力したい。　expected output:u
+index = -3
+console.log(`An index of ${index} returns the character ${mojiretsu.at(index)}`);
