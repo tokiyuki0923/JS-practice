@@ -64,5 +64,15 @@ let yudai = new Human('雄大', 27);
 console.log(yudai);
 
 
+// 普通の関数であればこの記述に問題ないが、classを使っていると、クラス宣言をしてからインスタンスを作成しなければいけない、この記述ではエラーが起こる
+const aaa = new MyClass();
+class MyClass {
+    constructor() {
+        this.name = "John";
+    }
+    sayHello() {
+        console.log(`Hello, ${this.name}!`);
+    }
+}
 
 // 基本的に、全てのオブジェクトはconstructerプロパティを持っている。
