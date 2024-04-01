@@ -64,7 +64,7 @@ let yudai = new Human('雄大', 27);
 console.log(yudai);
 
 
-// クラスを使用する場合はインスタンスを作成する前に、クラスオブジェクトを作成する必要がある。これで、”Hello,john”と出力された！！
+// クラスを使用する場合はインスタンスを作成する前に、クラスオブジェクトを作成する必要がある。これで、”Hello,john”と出力された！！expected output:”Hello,john!”
 class MyClass {
     constructor() {
         this.name = "John";
@@ -73,8 +73,15 @@ class MyClass {
 }
 const aaa = new MyClass();
 console.log(aaa);
-//expected output:”Hello,john”
 
 
 
-// 基本的に、全てのオブジェクトはconstructerプロパティを持っている。
+
+// new Treeの関数を参照するには？expected output: theTree.constructor is function Tree(name) {this.name = name;}
+let theTree = new Tree("Redwood");
+
+function Tree(name) {
+    this.name = name;
+}
+
+console.log("theTree.constructor is" + theTree.constructor);
