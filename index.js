@@ -93,6 +93,10 @@ const mojiretsu = "I want to play final fantasy7 rebirth. But I have no money to
 console.log(`${mojiretsu} ${mojiretsu.length}`);
 
 
+// 最後の単語がbuyで終わっているかと最後の文字は0から数えて65番目かどうかを判断したい。expected output:true
+console.log(mojiretsu.endsWith("buy.", 66));
+
+
 // 変数名mojiretsuの5番目の文字を出力したい。 expected output:t
 let index = 5
 console.log(`An index of ${index} returns the character ${mojiretsu.at(index)}`);
