@@ -114,3 +114,9 @@ console.log(`Character code ${mojiretsu.charCodeAt(index)} is equal to ${mojiret
 // 変数名iconの文字列の2番目のUnicodeコードポイント値を10進数で表した数字を出力したい。expected output:9675
 let icon = "☆○";
 console.log(icon.codePointAt(1));
+
+
+// 変数名str1とstr2を連結して出力したい。expected output:Hello World
+let str1 = "Hello";
+let str2 = "World";
+console.log(str1.concat(' ', str2));
