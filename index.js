@@ -42,5 +42,17 @@ console.log(window.sample);
 //この状態のthisに文字列を追加するということはwindowオブジェクトに文字列を追加するということになる
 
 
+//メソッドの中にthisを記述し、出力する。expected output: name:雄大　myFunc:function
+let mine = {
+    name: "雄大",
+    myFunc: function () {
+        console.log(this);
+    }
+}
+mine.myFunc();
+
+
+
+
 
 // 基本的に、全てのオブジェクトはconstructerプロパティを持っている
