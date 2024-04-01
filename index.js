@@ -64,12 +64,10 @@ let yudai = new Human('雄大', 27);
 console.log(yudai);
 
 
-// クラスを使用する場合はインスタンスを作成する前に、クラスオブジェクトを作成する必要がある。これで、”Hello,john”と出力されると思っていたのに、なぜか出ない。くそがぁぁっぁぁぁぁぁ！！！
+// クラスを使用する場合はインスタンスを作成する前に、クラスオブジェクトを作成する必要がある。これで、”Hello,john”と出力された！！
 class MyClass {
     constructor() {
         this.name = "John";
-    }
-    sayHello() {
         console.log(`Hello, ${this.name}!`);
     }
 }
