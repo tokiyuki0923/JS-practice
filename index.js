@@ -64,8 +64,7 @@ let yudai = new Human('雄大', 27);
 console.log(yudai);
 
 
-// 普通の関数であればこの記述に問題ないが、classを使っていると、クラス宣言をしてからインスタンスを作成しなければいけない、この記述ではエラーが起こる
-const aaa = new MyClass();
+// クラスを使用する場合はインスタンスを作成する前に、クラスオブジェクトを作成する必要がある。これで、”Hello,john”と出力されると思っていたのに、なぜか出ない。くそがぁぁっぁぁぁぁぁ！！！
 class MyClass {
     constructor() {
         this.name = "John";
@@ -74,5 +73,10 @@ class MyClass {
         console.log(`Hello, ${this.name}!`);
     }
 }
+const aaa = new MyClass();
+console.log(aaa);
+//expected output:”Hello,john”
+
+
 
 // 基本的に、全てのオブジェクトはconstructerプロパティを持っている。
