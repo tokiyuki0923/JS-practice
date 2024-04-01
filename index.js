@@ -33,8 +33,7 @@ myObj.age = 27;
 
 console.log(myObj);
 
-//thisという変数を使ってみる
-console.log
-
+//thisという変数を使ってみる。expected output:Window {stop: function, open: function, alert: function…}
+console.log(this);
 
 // 基本的に、全てのオブジェクトはconstructerプロパティを持っている
