@@ -85,3 +85,9 @@ function Tree(name) {
 }
 
 console.log("theTree.constructor is" + theTree.constructor);
+
+
+// 文字列の長さを数えたい。 expected output:66
+const mojiretsu = "I want to play final fantasy7 rebirth. But I have no money to buy."
+
+console.log(`${mojiretsu} ${mojiretsu.length}`);
