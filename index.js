@@ -23,7 +23,7 @@ console.log(ue);
 
 
 
-//newオブジェクトを使用してインスタンスを作成し、様々なデータを埋め込みたい。
+//new演算子を使用してインスタンスを作成し、様々なデータを埋め込みたい。expected output: name:雄大 age:27
 //Objectのインスタンスを作成して、変数myObjに格納
 let myObj = new Object();
 
@@ -33,7 +33,8 @@ myObj.age = 27;
 
 console.log(myObj);
 
-
+//thisという変数を使ってみる
+console.log
 
 
 // 基本的に、全てのオブジェクトはconstructerプロパティを持っている
