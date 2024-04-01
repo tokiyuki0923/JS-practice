@@ -52,6 +52,16 @@ let mine = {
 mine.myFunc();
 
 
+//new演算子でインスタンスを作成し、thisでプロパティを作成する。そしてconsole.logで出力する。expected output: Human{name:"雄大",age:27}
+function Human(name, age) {
+
+    this.name = name;
+    this.age = age;
+
+}
+
+let yudai = new Human('雄大', 27);
+console.log(yudai);
 
 
 
