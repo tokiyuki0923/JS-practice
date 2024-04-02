@@ -143,11 +143,24 @@ let twicedog = "I think Ruth's dog is cuter than your dog!";
 const searchTerm = 'dog';
 console.log(`Index of the last ${searchTerm} is ${twicedog.lastIndexOf(searchTerm)}`,);
 
-
-
 //孤立サロゲートが含まれているかどうかを判断したい。　expected:output:true
 let koritsu = ["I want to play final fantasy7 rebirth. But I have no money to buy."];
 for (const str of koritsu) { console.log(str.isWellFormed()); }
 /* これのどこに孤立サロゲートが含まれてんねん！問題なく出力できてんじゃん！！
 孤立サロゲートが含まれてたら意図しない挙動が生まれるんじゃないの？孤立サロゲート意味わからん、もうエラーが起きた時考えよ */
 
+
+// 以下二つの文字列を比較したとき、辞書順でどっちの方が先にくるかを出力したい（正の整数が出た場合、「後である」と判断され、負の整数が出た場合は「先である」と判断される。0が出た場合は同じであると判断される。）
+const a = 'réservé';
+const b = 'RESERVE';
+
+//大文字の方が先だと判断されるらしい　expected output:1
+console.log(a.localeCompare(b));
+
+//expected output:-1
+console.log(b.localeCompare(a));
+
+//どの言語をベースにするかというのも設定できる。今回の場合は英語をベースにするという意味
+//じゃあ初期値はなんなの？となるが、Intl.Collator() コンストラクターで定義されている順番が初期値であるらしい
+console.log(a.localeCompare(b, 'en', { sensitivity: 'base' }));
+//アクセントがついてると、アクセントがついてる方が先だと判断される
