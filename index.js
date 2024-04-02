@@ -136,3 +136,10 @@ console.log(`The word "${word}" ${mojiretsu.includes(word) ? 'is' : 'is not'} in
 let indexOfFirst = mojiretsu.indexOf(word);
 console.log(`The index of the first "${word}" is ${indexOfFirst}`);
 console.log(`The index of the second "${word}" is ${mojiretsu.indexOf(word, indexOfFirst + 1,)}`,);
+
+
+//孤立サロゲートが含まれているかどうかを判断したい。　expected:output:true
+let koritsu = ["I want to play final fantasy7 rebirth. But I have no money to buy."];
+for (const str of koritsu) { console.log(str.isWellFormed()); }
+/* これのどこに孤立サロゲートが含まれてんねん！問題なく出力できてんじゃん！！
+孤立サロゲートが含まれてたら意図しない挙動が生まれるんじゃないの？孤立サロゲート意味わからん、もうエラーが起きた時考えよ */
