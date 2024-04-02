@@ -172,8 +172,16 @@ let found = mojiretsu.match(regex);
 
 console.log(found);
 
+
+//ただのmatchだとキャプチャグループが無視される、なので出力されるものが「test1」「test2」のみになる
 const iuiu = "test1test2";
 const regexp = /t(e)(st(\d?))/g;
 const ppp = iuiu.match(regexp);
 
 console.log(ppp)
+
+
+const array = [...ppp.matchAll(regexp)];
+
+//test1までのキャプチャグループが全て出力される expected output :「test1」、「e」、「st1」、「1」
+console.log(array[0]);
