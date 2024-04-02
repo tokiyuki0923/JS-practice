@@ -124,3 +124,11 @@ console.log(icon.codePointAt(1));
 let str1 = "Hello";
 let str2 = "World";
 console.log(str1.concat(' ', str2));
+
+
+// 変数名mojiretsuの文字列の中に”money”という単語が含まれているかどうか知りたい。　expected output:"The word "money" is in the sentence"
+let word = "money";
+console.log(
+    `The word "${word}" ${mojiretsu.includes(word) ? 'is' : 'is not'
+    } in the sentence`,
+);
