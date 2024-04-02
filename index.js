@@ -180,7 +180,7 @@ const ppp = iuiu.match(regexp);
 
 console.log(ppp)
 
-
+// 正直「...」がなぜ必要なのかがわかっていない
 const array = [...iuiu.matchAll(regexp)];
 
 //test1までのキャプチャグループが全て出力される expected output :「test1」、「e」、「st1」、「1」
