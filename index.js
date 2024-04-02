@@ -138,8 +138,16 @@ console.log(`The index of the first "${word}" is ${indexOfFirst}`);
 console.log(`The index of the second "${word}" is ${mojiretsu.indexOf(word, indexOfFirst + 1,)}`,);
 
 
+//変数名twicedogの文字列の中に最後に出てくるdogという文字が何文字目にあるか出力したい。　expected output:38
+let twicedog = "I think Ruth's dog is cuter than your dog!";
+const searchTerm = 'dog';
+console.log(`Index of the last ${searchTerm} is ${twicedog.lastIndexOf(searchTerm)}`,);
+
+
+
 //孤立サロゲートが含まれているかどうかを判断したい。　expected:output:true
 let koritsu = ["I want to play final fantasy7 rebirth. But I have no money to buy."];
 for (const str of koritsu) { console.log(str.isWellFormed()); }
 /* これのどこに孤立サロゲートが含まれてんねん！問題なく出力できてんじゃん！！
 孤立サロゲートが含まれてたら意図しない挙動が生まれるんじゃないの？孤立サロゲート意味わからん、もうエラーが起きた時考えよ */
+
