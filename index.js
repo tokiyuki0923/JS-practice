@@ -181,7 +181,9 @@ const ppp = iuiu.match(regexp);
 console.log(ppp)
 
 
-const array = [...ppp.matchAll(regexp)];
+const array = [...iuiu.matchAll(regexp)];
 
 //test1までのキャプチャグループが全て出力される expected output :「test1」、「e」、「st1」、「1」
 console.log(array[0]);
+//test2のキャプチャグループが全て出力される。繰り返し1回をしているため　expected output :「test2」、「e」、「st2」、「2」
+console.log(array[1]);
