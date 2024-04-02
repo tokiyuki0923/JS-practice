@@ -171,3 +171,9 @@ let regex = /[A-Z]/g;
 let found = mojiretsu.match(regex);
 
 console.log(found);
+
+const iuiu = "test1test2";
+const regexp = /t(e)(st(\d?))/g;
+const ppp = iuiu.match(regexp);
+
+console.log(ppp)
