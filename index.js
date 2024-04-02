@@ -128,7 +128,11 @@ console.log(str1.concat(' ', str2));
 
 // 変数名mojiretsuの文字列の中に”money”という単語が含まれているかどうか知りたい。　expected output:"The word "money" is in the sentence"
 let word = "money";
-console.log(
-    `The word "${word}" ${mojiretsu.includes(word) ? 'is' : 'is not'
-    } in the sentence`,
-);
+console.log(`The word "${word}" ${mojiretsu.includes(word) ? 'is' : 'is not'} in the sentence`,);
+
+
+
+// 変数名mojiretsuの文字列の中に「money」という単語は何文字目に出てくるかを出力したい。expected output:53と-1
+let indexOfFirst = mojiretsu.indexOf(word);
+console.log(`The index of the first "${word}" is ${indexOfFirst}`);
+console.log(`The index of the second "${word}" is ${mojiretsu.indexOf(word, indexOfFirst + 1,)}`,);
