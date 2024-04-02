@@ -163,3 +163,11 @@ console.log(b.localeCompare(a));
 //どの言語をベースにするかというのも設定できる。今回の場合は英語をベースにするという意味
 //じゃあ初期値はなんなの？となるが、Intl.Collator() コンストラクターで定義されている順番が初期値であるらしい
 console.log(a.localeCompare(b, 'en', { sensitivity: 'base' }));
+
+
+/* //文字列mojiretsuに含まれている大文字A-Zを全部抜き出したい。　expected output:I,B,I
+matchを使ったオブジェクトは他にもいっぱいあるけどまとめるの死ぬほど時間かかりそうだからとりあえずこれだけ。 */
+let regex = /[A-Z]/g;
+let found = mojiretsu.match(regex);
+
+console.log(found);
