@@ -244,5 +244,13 @@ console.log(Number.isNaN(NaN));
 let iti = 1;
 iti++;
 console.log(iti);
+// マイナスバージョン
 iti--;
-console.log(iti)
+console.log(iti);
+// 同じ型で同じ値且つ、オペランドがオブジェクトの場合はどちらも同じオブジェクトでないといけない。異なるオブジェクトを比較した場合はfalseを返す
+const objA = {};
+const objB = {};
+// 生成されたオブジェクトは異なる参照となる
+console.log(objA === objB);
+// 同じ参照を比較している場合
+console.log(objA === objA);
