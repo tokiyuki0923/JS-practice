@@ -197,6 +197,12 @@ const obj = {
 console.log(obj.key)
 console.log(obj["key"])
 
-// 昨日大橋さんと一緒にやったところだ！！expected output:index0
+// 昨日大橋さんと一緒にやったところだ！！expected output:index:0
 const hairetsu = ["index:0", "index:1", "index:2"];
-console.log(hairetsu[0]); 
+console.log(hairetsu[0]);
+
+// 1文字以上の数字にマッチする正規表現
+// `numberRegExp`の正規表現が文字列"123"にマッチするかをテストする
+// 正規表現をconsole.logで出力したい場合、test()メソッドを使う
+const numberRegExp = /\d+/;
+console.log(numberRegExp.test("123")); // => true
