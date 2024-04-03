@@ -221,3 +221,6 @@ console.log(operando);
 
 //0で割り算したらinfinityと出力される
 console.log(10 / 0);
+
+// 「％」は割り算した時の余りを出力する
+console.log(9 % 2);
