@@ -214,5 +214,10 @@ const str = new String("文字列");
 
 //この場合のオペランドは1と2
 //+が演算子
+//そして、オペランドを二つ取る演算子のことを二項演算子という
+//オペランドを一つ取る演算子のことを単項演算子という
 let operando = 1 + 2;
 console.log(operando);
+
+//0で割り算したらinfinityと出力される
+console.log(10 / 0);
