@@ -227,4 +227,6 @@ console.log(9 % 2);
 
 //「**」は乗を出力する
 //黒閃！！！！！
-console.log(2 ** 2.5); 
+console.log(2 ** 2.5);
+//上記と同じ意味らしい。古い書き方。覚えなくて良さげ
+console.log(Math.pow(2, 2.5));
