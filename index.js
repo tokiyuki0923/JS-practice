@@ -193,5 +193,10 @@ const obj = {
 };
 
 //オブジェクトのプロパティはドットで出力する方法とブラケットで出力する方法がある
+//ドットで出力する場合は変数とプロパティを同じ識別子にする必要がある、「str.文字列」みたいな感じならいける
 console.log(obj.key)
 console.log(obj["key"])
+
+// 昨日大橋さんと一緒にやったところだ！！expected output:index0
+const hairetsu = ["index:0", "index:1", "index:2"];
+console.log(hairetsu[0]); 
