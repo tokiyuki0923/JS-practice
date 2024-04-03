@@ -187,3 +187,11 @@ const array = [...iuiu.matchAll(regexp)];
 console.log(array[0]);
 //test2のキャプチャグループが全て出力される。繰り返し1回をしているため　expected output :「test2」、「e」、「st2」、「2」
 console.log(array[1]);
+
+const obj = {
+    "key": "value"
+};
+
+//オブジェクトのプロパティはドットで出力する方法とブラケットで出力する方法がある
+console.log(obj.key)
+console.log(obj["key"])
