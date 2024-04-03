@@ -206,3 +206,7 @@ console.log(hairetsu[0]);
 // 正規表現をconsole.logで出力したい場合、test()メソッドを使う
 const numberRegExp = /\d+/;
 console.log(numberRegExp.test("123")); // => true
+
+// これラッパーオブジェクトっていうのね。new演算子使う場合は（）が必要なのはなんとなく知っていたけど、その（）の名前がラッパーオブジェクトという。
+// new演算子の理解が間違っていた、組み込みオブジェクトによって書き方が異なってくる。だから覚えてたやり方と挙動が違ったのかー
+const str = new String("文字列");
