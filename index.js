@@ -234,3 +234,8 @@ console.log(Math.pow(2, 2.5));
 console.log(+"1");
 //数字に変更できない場合はNaNと出力される
 console.log(+"文字列");
+
+/* NaNとはNot a Numberの略である
+数値ではないが、Number型に属する
+Number.isNanという変数で「NaN」で値がNaNであるかどうかを判断できる。　expected output:true*/
+console.log(Number.isNaN(NaN));
