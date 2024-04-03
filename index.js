@@ -230,3 +230,7 @@ console.log(9 % 2);
 console.log(2 ** 2.5);
 //上記と同じ意味らしい。古い書き方。覚えなくて良さげ
 console.log(Math.pow(2, 2.5));
+//string型の中の数字を、number型の数字に変える
+console.log(+"1");
+//数字に変更できない場合はNaNと出力される
+console.log(+"文字列");
