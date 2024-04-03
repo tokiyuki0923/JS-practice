@@ -244,3 +244,5 @@ console.log(Number.isNaN(NaN));
 let iti = 1;
 iti++;
 console.log(iti);
+iti--;
+console.log(iti)
