@@ -239,3 +239,8 @@ console.log(+"文字列");
 数値ではないが、Number型に属する
 Number.isNanというメソッドで値がNaNであるかどうかを判断できる。　expected output:true*/
 console.log(Number.isNaN(NaN));
+
+// 数値が格納されている変数名++;はその数値に1をプラスした数字になる
+let iti = 1;
+iti++;
+console.log(iti);
