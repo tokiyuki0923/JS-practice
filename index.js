@@ -272,6 +272,8 @@ function double(num) {
 }
 console.log(double(2));
 
-function echo(x) {
-    return
+function echo(x = "デフォルト値") {
+    return x;
 }
+console.log(echo(35));
+console.log(echo());
