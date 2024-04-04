@@ -329,3 +329,7 @@ if (version === "かきくけこ") {
 } else if (version === "さしすせそ") {
     console.log("サ行だよ");
 }
+
+// new Date()で現在の年日時を出力する
+const now = new Date();
+console.log(now);
