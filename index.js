@@ -333,3 +333,7 @@ if (version === "かきくけこ") {
 // new Date()で現在の年日時を出力する
 const now = new Date();
 console.log(now.getFullYear());
+
+// ${変数名}で変数名の式を展開できる
+const year = new Date().getFullYear();
+console.log(`現在${year}年です`);
