@@ -332,4 +332,4 @@ if (version === "かきくけこ") {
 
 // new Date()で現在の年日時を出力する
 const now = new Date();
-console.log(now);
+console.log(now.getFullYear());
