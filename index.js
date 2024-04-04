@@ -254,3 +254,8 @@ const objB = {};
 console.log(objA === objB);
 // 同じ参照を比較している場合
 console.log(objA === objA);
+// 異なる型、異なる値の場合のみtrueを出力する
+console.log(1 !== "1");
+// 二つのオペランドを比較する、同じ型の場合は＝＝＝と同じ挙動になる。つまり同じ型同じ値でないとtrueが出力されない
+console.log("koko" == "koko");
+console.log("koko" == "ii");
