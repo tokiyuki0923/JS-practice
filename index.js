@@ -295,3 +295,7 @@ const fnD = (x, y) => { /* 仮引数が複数のとき */ };
 // 次の２つの定義は同じ意味となる
 const mulA = x => { return x * x; }; // ブロックの中でreturn
 const mulB = x => x * x;            // 1行のみの場合はreturnとブロックを省略できる
+
+if (true) {
+    console.log("この文は実行される")
+}
