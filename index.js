@@ -277,3 +277,10 @@ function echo(x = "デフォルト値") {
 }
 console.log(echo(35));
 console.log(echo());
+
+// なるほど!!そういうことかー！ようやく理解できてきた
+function edd(x, y) {
+    return x + y;
+}
+edd(1, 3);
+edd(1, 3, 5); 
