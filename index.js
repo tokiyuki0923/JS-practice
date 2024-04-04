@@ -270,4 +270,4 @@ console.log(1 != "1"); // => false
 function double(num) {
     return num * 5;
 }
-console.log(double(3));
+console.log(double(2));
