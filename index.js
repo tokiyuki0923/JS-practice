@@ -299,3 +299,7 @@ const mulB = x => x * x;            // 1行のみの場合はreturnとブロッ�
 if (true) {
     console.log("この文は実行される")
 }
+const x = 42;
+if (x > 10) {
+    console.log("xは10より大きい");
+}
