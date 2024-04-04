@@ -259,4 +259,15 @@ console.log(1 !== "1");
 // 二つのオペランドを比較する、同じ型の場合は＝＝＝と同じ挙動になる。つまり同じ型同じ値でないとtrueが出力されない。しかし、異なる型の同じ値であった場合のみ、「暗黙的な型変換」が自動で行われるためtrueが出力される
 console.log("koko" == "koko");
 console.log("koko" == "ii");
-console.log(1 == "1"); 
+console.log(1 == "1");
+// !=も等しくない場合のみtrueを出力する
+console.log("JavaScript" != "ECMAScript"); // => true
+console.log(1 != "1"); // => false
+
+// functionとreturnはセットみたいなもの
+// functionはそれ自体に何か機能を持っているわけではなく、関数名に仮引数を入れて使う
+// 関数が値を返す必要がない場合はreturn文を省略できる
+function double(num) {
+    return num * 5;
+}
+console.log(double(3));
