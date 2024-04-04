@@ -271,3 +271,7 @@ function double(num) {
     return num * 5;
 }
 console.log(double(2));
+
+function echo(x) {
+    return
+}
