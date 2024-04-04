@@ -301,5 +301,31 @@ if (true) {
 }
 const x = 42;
 if (x > 10) {
-    console.log("xは10より大きい");
+    console.log("その通り")
+}
+
+
+if (true) {
+    console.log("この行は実行されます");
+}
+if ("文字列") {
+    console.log("この行は実行されます");
+}
+if (42) {
+    console.log("この行は実行されます");
+}
+if (["配列"]) {
+    console.log("この行は実行されます");
+}
+if ({ name: "オブジェクト" }) {
+    console.log("この行は実行されます");
+}
+
+const version = "あいうえお";
+if (version === "かきくけこ") {
+    console.log("カ行だよ");
+} else if (version === "あいうえお") {
+    console.log("ア行だよ");
+} else if (version === "さしすせそ") {
+    console.log("サ行だよ");
 }
