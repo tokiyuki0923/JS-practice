@@ -337,3 +337,15 @@ console.log(now.getFullYear());
 // ${変数名}で変数名の式を展開できる
 const year = new Date().getFullYear();
 console.log(`現在${year}年です`);
+
+
+// 昨日のを組み合わせるとこういうif文を作れる
+if (year % 400 === 0) {
+    console.log(`${year}年はうるう年です`);/* 400で割り切れたら閏年だお */
+} else if (year % 100 === 0) {
+    console.log(`${year}年はうるう年ではありません`);/* 100で割り切れちゃったら閏年じゃないお */
+} else if (year % 4 === 0) {
+    console.log(`${year}年はうるう年です`);/* 4で割り切れたら閏年だお */
+} else {
+    console.log(`${year}年はうるう年ではありません`);
+}
