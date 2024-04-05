@@ -511,3 +511,9 @@ console.log(Object.keys(kkk));
 console.log(Object.values(kkk));
 // `Object.entries`は[キー, 値]の配列を返す
 console.log(Object.entries(kkk));
+
+// Object.assignを使用すればオブジェクトをマージできる。今回の場合は{}にターゲットして、ObjectAとObjectBをマージするよって命令を出している
+const objectA = { a: "a" };
+const objectB = { b: "b" };
+const merged = Object.assign({}, objectA, objectB);
+console.log(merged);
