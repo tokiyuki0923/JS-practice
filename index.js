@@ -496,4 +496,18 @@ const mmm = {
         b: "objのaプロパティのbプロパティ"
     }
 };
-console.log(mmm?.a?.b); 
+console.log(mmm?.a?.b);
+
+
+// よく使われる静的メソッド
+const kkk = {
+    "one": 1,
+    "two": 2,
+    "three": 3
+};
+// `Object.keys`はキーを列挙した配列を返す
+console.log(Object.keys(kkk));
+// `Object.values`は値を列挙した配列を返す
+console.log(Object.values(kkk));
+// `Object.entries`は[キー, 値]の配列を返す
+console.log(Object.entries(kkk));
