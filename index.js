@@ -469,4 +469,13 @@ const ooo = {
     // これは変数「key」ではなく「key-string」をプロパティ名にしているらしい。わかりづら！
     [key]: "value"
 };
-console.log(ooo[key]); 
+console.log(ooo[key]);
+
+// プロパティは後から削除可能、でもどういうとき使うのかが全然イメージできない
+const lll = {
+    key1: "value1",
+    key2: "value2"
+};
+// key1プロパティを削除
+delete lll.key1;
+console.log(lll);/* 出力されるのはkey2:valueだけ */
