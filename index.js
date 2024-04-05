@@ -342,6 +342,8 @@ if (year % 400 === 0) {
 }
 
 
+// 以下のswitch文とif文はやってることは一緒だが、switch文の方が見やすい（リーダブルってやつ？）
+// switch文は一度に複数分岐させていくイメージで、if文は一つずつ試していくイメージ。条件分岐が複数ある場合はswitch文を使う方がいい。if文は一つずつ実行していくので処理も重くなる
 function getECMAScriptName(version) {
     switch (version) {
         case "ES5":
@@ -354,5 +356,15 @@ function getECMAScriptName(version) {
             return "しらないバージョンです";
     }
 }
-// 関数を実行して`return`された値を得る
 console.log(getECMAScriptName("ES6"));
+
+const ver = "ES6";
+if (ver === "ES5") {
+    console.log("ECMAScript 5");
+} else if (ver === "ES6") {
+    console.log("ECMAScript 2015");
+} else if (ver === "ES7") {
+    console.log("ECMAScript 2016");
+} else {
+    console.log("しらないバージョンです");
+}
