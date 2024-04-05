@@ -434,3 +434,9 @@ for (const key in ob) {
     const value = ob[key];
     console.log(`key:${key}, value:${value}`);
 }
+
+// for 変数名 of 変数名 は簡単だな、一つずつ出力してくれる 
+const arra = [1, 2, 3];
+for (const valu of arra) {
+    console.log(valu);
+}
