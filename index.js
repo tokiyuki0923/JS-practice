@@ -483,4 +483,9 @@ console.log(lll);/* 出力されるのはkey2:valueだけ */
 // 普通constを使ったら再代入不可能だが、オブジェクトの上書きはできる。constは値を固定しているわけではなく、再代入を防ぐ物。なので代入されているオブジェクトの上書きはできてしまう
 const yyy = { key: "value" };
 yyy.key = "Hi!";
-console.log(yyy.key); 
+console.log(yyy.key);
+
+// Object.hasOwn(変数名,プロパティ名)というメソッドがある。変数名はそのプロパティを持っているかどうかを確認するためのメソッドで、持っていればtrue
+if (Object.hasOwn(yyy, "key")) {
+    console.log(true);
+}
