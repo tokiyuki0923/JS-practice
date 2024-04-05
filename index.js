@@ -180,7 +180,7 @@ const ppp = iuiu.match(regexp);
 
 console.log(ppp)
 
-// 正直「...」がなぜ必要なのかがわかっていない
+// ...はスプレッドオペレーター
 const array = [...iuiu.matchAll(regexp)];
 
 //test1までのキャプチャグループが全て出力される expected output :「test1」、「e」、「st1」、「1」
@@ -367,4 +367,76 @@ if (ver === "ES5") {
     console.log("ECMAScript 2016");
 } else {
     console.log("しらないバージョンです");
+}
+
+let o = 0;
+console.log(`ループ開始前のxの値: ${o}`);
+while (o < 10) {
+    console.log(o);
+    o += 1;
+}
+console.log(`ループ終了後のxの値: ${o}`);
+
+// 試しに無限ループさせてみたらえぐかった。もうやらない
+/* let i = 1;
+while (i > 0) {
+    console.log(`${i}回目のループ`);
+    i += 1;
+} */
+
+// まずtotalを0に設定する→そしてiを0に設定する→iは10より小さいがtrueなため文が実行される→実行された値に+1してまたtrueかどうかを判断し、trueなら実行→その繰り返し
+// やっぱりifよりforの方が難しいよな
+let total = 0;
+
+for (let i = 0; i < 10; i++) {
+    total += i + 1;
+}
+console.log(total);
+
+
+// やばい。本格的にわからないやつ出てきた。numbers.lengthって何よ。一旦保留！
+function sum(numbers) {
+    let total = 0;
+    for (let i = 0; i < numbers.length; i++) {
+        total += numbers[i];
+    }
+    return total;
+}
+
+console.log(sum([1, 2, 3, 4, 5]));
+// 上と同じ処理だけど俺は何がわかってないんだ？
+function sum(numbers) {
+    let total = 0;
+    numbers.forEach(num => {
+        total += num;
+    });
+    return total;
+}
+// 配列がわかっていないからここに書かれていることがわからないのか？？？一旦配列のセクションに行くまで保留かな
+console.log(sum([1, 2, 3, 4, 5]));
+
+// 配列にはfilterメソッドがある。下記の場合は2で割った時に余りがゼロになる数字（つまり10.20）のみを配列として出力する。名前の通りフィルターにかけている
+function isEven(num) {
+    return num % 2 === 0;
+}
+
+const bump = [1, 5, 10, 15, 20];
+console.log(bump.filter(isEven));
+
+// for in文ここも一旦保留
+const ob = {
+    "a": 1,
+    "b": 2,
+    "c": 3
+};
+// まずいなぁ、難易度が急に上がったfor文のところで何が行われているかがよくわからん。配列のところまで保留
+for (const key in ob) {
+    const value = ob[key];
+    console.log(`key:${key}, value:${value}`);
+}
+
+// for 変数名 of 変数名 は簡単だな、一つずつ出力してくれる 
+const arra = [1, 2, 3];
+for (const valu of arra) {
+    console.log(valu);
 }
