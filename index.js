@@ -524,3 +524,6 @@ const maaji = {
     ...objectB
 };
 console.log(maaji)
+
+//チャプター「オブジェクト」終了
+//チャプター「プロトタイプオブジェクト」開始
