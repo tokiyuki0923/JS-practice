@@ -392,3 +392,15 @@ for (let i = 0; i < 10; i++) {
     total += i + 1;
 }
 console.log(total);
+
+
+// やばい。本格的にわからないやつ出てきた。numbers.lengthって何よ。一旦保留！
+function sum(numbers) {
+    let total = 0;
+    for (let i = 0; i < numbers.length; i++) {
+        total += numbers[i];
+    }
+    return total;
+}
+
+console.log(sum([1, 2, 3, 4, 5]));
