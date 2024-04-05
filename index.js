@@ -271,3 +271,100 @@ function double(num) {
     return num * 5;
 }
 console.log(double(2));
+
+function echo(x = "デフォルト値") {
+    return x;
+}
+console.log(echo(35));
+console.log(echo());
+
+// なるほど!!そういうことかー！ようやく理解できてきた
+function edd(x, y) {
+    return x + y;
+}
+edd(1, 3);
+edd(1, 3, 5);
+
+// アロー関数のルール
+// 仮引数の数と定義
+const fnA = () => { /* 仮引数がないとき */ };
+const fnB = (x) => { /* 仮引数が1つのみのとき */ };
+const fnC = x => { /* 仮引数が1つのみのときは()を省略可能 */ };
+const fnD = (x, y) => { /* 仮引数が複数のとき */ };
+// 値の返し方
+// 次の２つの定義は同じ意味となる
+const mulA = x => { return x * x; }; // ブロックの中でreturn
+const mulB = x => x * x;            // 1行のみの場合はreturnとブロックを省略できる
+
+if (true) {
+    console.log("この文は実行される")
+}
+const x = 42;
+if (x > 10) {
+    console.log("その通り")
+}
+
+
+if (true) {
+    console.log("この行は実行されます");
+}
+if ("文字列") {
+    console.log("この行は実行されます");
+}
+if (42) {
+    console.log("この行は実行されます");
+}
+if (["配列"]) {
+    console.log("この行は実行されます");
+}
+if ({ name: "オブジェクト" }) {
+    console.log("この行は実行されます");
+}
+
+// new Date()で現在の年日時を出力する
+const now = new Date();
+console.log(now.getFullYear());
+
+// ${変数名}で変数名の式を展開できる
+const year = new Date().getFullYear();
+console.log(`現在${year}年です`);
+
+
+// 昨日のを組み合わせるとこういうif文を作れる
+if (year % 400 === 0) {
+    console.log(`${year}年はうるう年です`);/* 400で割り切れたら閏年だお */
+} else if (year % 100 === 0) {
+    console.log(`${year}年はうるう年ではありません`);/* 100で割り切れちゃったら閏年じゃないお */
+} else if (year % 4 === 0) {
+    console.log(`${year}年はうるう年です`);/* 4で割り切れたら閏年だお */
+} else {
+    console.log(`${year}年はうるう年ではありません`);
+}
+
+
+// 以下のswitch文とif文はやってることは一緒だが、switch文の方が見やすい（リーダブルってやつ？）
+// switch文は一度に複数分岐させていくイメージで、if文は一つずつ試していくイメージ。条件分岐が複数ある場合はswitch文を使う方がいい。if文は一つずつ実行していくので処理も重くなる
+function getECMAScriptName(version) {
+    switch (version) {
+        case "ES5":
+            return "ECMAScript 5";
+        case "ES6":
+            return "ECMAScript 2015";
+        case "ES7":
+            return "ECMAScript 2016";
+        default:
+            return "しらないバージョンです";
+    }
+}
+console.log(getECMAScriptName("ES6"));
+
+const ver = "ES6";
+if (ver === "ES5") {
+    console.log("ECMAScript 5");
+} else if (ver === "ES6") {
+    console.log("ECMAScript 2015");
+} else if (ver === "ES7") {
+    console.log("ECMAScript 2016");
+} else {
+    console.log("しらないバージョンです");
+}
