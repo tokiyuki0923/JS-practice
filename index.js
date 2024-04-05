@@ -404,3 +404,13 @@ function sum(numbers) {
 }
 
 console.log(sum([1, 2, 3, 4, 5]));
+// 上と同じ処理だけど俺は何がわかってないんだ？
+function sum(numbers) {
+    let total = 0;
+    numbers.forEach(num => {
+        total += num;
+    });
+    return total;
+}
+
+sum([1, 2, 3, 4, 5]);
