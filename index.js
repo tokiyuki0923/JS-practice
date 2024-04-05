@@ -453,3 +453,13 @@ const kiki = {
 
 const builtinobj = Object(1 + 1); /* Objectはビルトインオブジェクトといって、これだけでインスタンスを作成できる。new Objectと書いているのと一緒の意味になる。そんな便利なこと早く教えといてくれ */
 console.log(builtinobj); // => 2
+
+
+// この記法を分割代入という
+const language = {
+    ja: "日本語",
+    en: "英語"
+};
+const { ja, en } = language;
+console.log(ja);/* 日本語 */
+console.log(en);/* 英語 */
