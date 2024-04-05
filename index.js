@@ -383,3 +383,12 @@ while (i > 0) {
     console.log(`${i}回目のループ`);
     i += 1;
 } */
+
+// まずtotalを0に設定する→そしてiを0に設定する→iは10より小さいがtrueなため文が実行される→実行された値に+1してまたtrueかどうかを判断し、trueなら実行→その繰り返し
+// やっぱりifよりforの方が難しいよな
+let total = 0;
+
+for (let i = 0; i < 10; i++) {
+    total += i + 1;
+}
+console.log(total);
