@@ -479,3 +479,8 @@ const lll = {
 // key1プロパティを削除
 delete lll.key1;
 console.log(lll);/* 出力されるのはkey2:valueだけ */
+
+// 普通constを使ったら再代入不可能だが、オブジェクトの上書きはできる。constは値を固定しているわけではなく、再代入を防ぐ物。なので代入されているオブジェクトの上書きはできてしまう
+const yyy = { key: "value" };
+yyy.key = "Hi!";
+console.log(yyy.key); 
