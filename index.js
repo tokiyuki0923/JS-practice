@@ -463,3 +463,10 @@ const language = {
 const { ja, en } = language;
 console.log(ja);/* 日本語 */
 console.log(en);/* 英語 */
+
+const key = "key-string";
+const ooo = {
+    // これは変数「key」ではなく「key-string」をプロパティ名にしているらしい。わかりづら！
+    [key]: "value"
+};
+console.log(ooo[key]); 
