@@ -321,15 +321,6 @@ if ({ name: "オブジェクト" }) {
     console.log("この行は実行されます");
 }
 
-const version = "あいうえお";
-if (version === "かきくけこ") {
-    console.log("カ行だよ");
-} else if (version === "あいうえお") {
-    console.log("ア行だよ");
-} else if (version === "さしすせそ") {
-    console.log("サ行だよ");
-}
-
 // new Date()で現在の年日時を出力する
 const now = new Date();
 console.log(now.getFullYear());
@@ -349,3 +340,19 @@ if (year % 400 === 0) {
 } else {
     console.log(`${year}年はうるう年ではありません`);
 }
+
+
+function getECMAScriptName(version) {
+    switch (version) {
+        case "ES5":
+            return "ECMAScript 5";
+        case "ES6":
+            return "ECMAScript 2015";
+        case "ES7":
+            return "ECMAScript 2016";
+        default:
+            return "しらないバージョンです";
+    }
+}
+// 関数を実行して`return`された値を得る
+console.log(getECMAScriptName("ES6"));
