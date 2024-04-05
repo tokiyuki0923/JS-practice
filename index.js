@@ -368,3 +368,18 @@ if (ver === "ES5") {
 } else {
     console.log("しらないバージョンです");
 }
+
+let o = 0;
+console.log(`ループ開始前のxの値: ${o}`);
+while (o < 10) {
+    console.log(o);
+    o += 1;
+}
+console.log(`ループ終了後のxの値: ${o}`);
+
+// 試しに無限ループさせてみたらえぐかった。もうやらない
+/* let i = 1;
+while (i > 0) {
+    console.log(`${i}回目のループ`);
+    i += 1;
+} */
