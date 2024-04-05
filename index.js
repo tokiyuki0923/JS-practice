@@ -489,3 +489,11 @@ console.log(yyy.key);
 if (Object.hasOwn(yyy, "key")) {
     console.log(true);
 }
+
+//ネストされているプロパティにアクセスしたい場合はOptional chaining演算子というものを使用する。ドットではなく?.をつかう。途中のプロパティの時点で見つからなかった場合はundefinedを返してそこで終わってくれる
+const mmm = {
+    a: {
+        b: "objのaプロパティのbプロパティ"
+    }
+};
+console.log(mmm?.a?.b); 
