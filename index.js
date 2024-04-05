@@ -517,3 +517,10 @@ const objectA = { a: "a" };
 const objectB = { b: "b" };
 const merged = Object.assign({}, objectA, objectB);
 console.log(merged);
+
+//スプレッド構文を使うと強制的に新しいオブジェクトを生み出し、そこでマージする
+const maaji = {
+    ...objectA,
+    ...objectB
+};
+console.log(maaji)
