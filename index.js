@@ -414,3 +414,11 @@ function sum(numbers) {
 }
 // 配列がわかっていないからここに書かれていることがわからないのか？？？一旦配列のセクションに行くまで保留かな
 console.log(sum([1, 2, 3, 4, 5]));
+
+// 配列にはfilterメソッドがある。下記の場合は2で割った時に余りがゼロになる数字（つまり10.20）のみを配列として出力する。名前の通りフィルターにかけている
+function isEven(num) {
+    return num % 2 === 0;
+}
+
+const bump = [1, 5, 10, 15, 20];
+console.log(bump.filter(isEven));
