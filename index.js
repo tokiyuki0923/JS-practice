@@ -445,4 +445,10 @@ for (const valu of arra) {
 const kiki = {
     // キー: 値
     "key": "value"
+    // キーの部分は「""」省略可能
+    //key : "value"　とかいても同じ
+    //"my-prop": "value" だと「-」が変数名として利用できないため""で囲む必要がある
 };
+
+const builtinobj = Object(1 + 1); /* Objectはビルトインオブジェクトといって、これだけでインスタンスを作成できる。new Objectと書いているのと一緒の意味になる。そんな便利なこと早く教えといてくれ */
+console.log(builtinobj); // => 2
