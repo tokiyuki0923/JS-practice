@@ -440,3 +440,9 @@ const arra = [1, 2, 3];
 for (const valu of arra) {
     console.log(valu);
 }
+// チャプター「オブジェクト」開始
+// おそらく知ってること多いが、一応書いていく
+const kiki = {
+    // キー: 値
+    "key": "value"
+};
