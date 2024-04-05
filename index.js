@@ -422,3 +422,15 @@ function isEven(num) {
 
 const bump = [1, 5, 10, 15, 20];
 console.log(bump.filter(isEven));
+
+// for in文ここも一旦保留
+const ob = {
+    "a": 1,
+    "b": 2,
+    "c": 3
+};
+// まずいなぁ、難易度が急に上がったfor文のところで何が行われているかがよくわからん。配列のところまで保留
+for (const key in ob) {
+    const value = ob[key];
+    console.log(`key:${key}, value:${value}`);
+}
