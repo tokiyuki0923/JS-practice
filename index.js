@@ -194,6 +194,7 @@ const obj = {
 
 //オブジェクトのプロパティはドットで出力する方法とブラケットで出力する方法がある
 //ドットで出力する場合は変数とプロパティを同じ識別子にする必要がある、「str.文字列」みたいな感じならいける
+// 基本的に.を使う。それで無理なやつだけ[]を使う
 console.log(obj.key)
 console.log(obj["key"])
 
@@ -440,3 +441,86 @@ const arra = [1, 2, 3];
 for (const valu of arra) {
     console.log(valu);
 }
+// チャプター「オブジェクト」開始
+// おそらく知ってること多いが、一応書いていく
+const kiki = {
+    // キー: 値
+    "key": "value"
+    // キーの部分は「""」省略可能
+    //key : "value"　とかいても同じ
+    //"my-prop": "value" だと「-」が変数名として利用できないため""で囲む必要がある
+};
+
+const builtinobj = Object(1 + 1); /* Objectはビルトインオブジェクトといって、これだけでインスタンスを作成できる。new Objectと書いているのと一緒の意味になる。そんな便利なこと早く教えといてくれ */
+console.log(builtinobj); // => 2
+
+
+// この記法を分割代入という
+const language = {
+    ja: "日本語",
+    en: "英語"
+};
+const { ja, en } = language;
+console.log(ja);/* 日本語 */
+console.log(en);/* 英語 */
+
+const key = "key-string";
+const ooo = {
+    // これは変数「key」ではなく「key-string」をプロパティ名にしているらしい。わかりづら！
+    [key]: "value"
+};
+console.log(ooo[key]);
+
+// プロパティは後から削除可能、でもどういうとき使うのかが全然イメージできない
+const lll = {
+    key1: "value1",
+    key2: "value2"
+};
+// key1プロパティを削除
+delete lll.key1;
+console.log(lll);/* 出力されるのはkey2:valueだけ */
+
+// 普通constを使ったら再代入不可能だが、オブジェクトの上書きはできる。constは値を固定しているわけではなく、再代入を防ぐ物。なので代入されているオブジェクトの上書きはできてしまう
+const yyy = { key: "value" };
+yyy.key = "Hi!";
+console.log(yyy.key);
+
+// Object.hasOwn(変数名,プロパティ名)というメソッドがある。変数名はそのプロパティを持っているかどうかを確認するためのメソッドで、持っていればtrue
+if (Object.hasOwn(yyy, "key")) {
+    console.log(true);
+}
+
+//ネストされているプロパティにアクセスしたい場合はOptional chaining演算子というものを使用する。ドットではなく?.をつかう。途中のプロパティの時点で見つからなかった場合はundefinedを返してそこで終わってくれる
+const mmm = {
+    a: {
+        b: "objのaプロパティのbプロパティ"
+    }
+};
+console.log(mmm?.a?.b);
+
+
+// よく使われる静的メソッド
+const kkk = {
+    "one": 1,
+    "two": 2,
+    "three": 3
+};
+// `Object.keys`はキーを列挙した配列を返す
+console.log(Object.keys(kkk));
+// `Object.values`は値を列挙した配列を返す
+console.log(Object.values(kkk));
+// `Object.entries`は[キー, 値]の配列を返す
+console.log(Object.entries(kkk));
+
+// Object.assignを使用すればオブジェクトをマージできる。今回の場合は{}にターゲットして、ObjectAとObjectBをマージするよって命令を出している
+const objectA = { a: "a" };
+const objectB = { b: "b" };
+const merged = Object.assign({}, objectA, objectB);
+console.log(merged);
+
+//スプレッド構文を使うと強制的に新しいオブジェクトを生み出し、そこでマージする
+const maaji = {
+    ...objectA,
+    ...objectB
+};
+console.log(maaji)
