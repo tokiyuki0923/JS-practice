@@ -550,3 +550,4 @@ console.log(ma[0][0]);//この場合は配列の中の配列(2次元配列)の�
 const arr = ["one", "two", "three"];
 console.log(arr.length); //配列の数が出力される。つまり3
 console.log(arr[arr.length - 1]);//配列の最後の要素にアクセスするには配列の変数名.length-1で出力する。つまり"three"
+console.log(arr.at(-1));//length -1と一緒、つまりthree
