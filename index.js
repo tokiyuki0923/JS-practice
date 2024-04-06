@@ -551,3 +551,4 @@ const arr = ["one", "two", "three"];
 console.log(arr.length); //配列の数が出力される。つまり3
 console.log(arr[arr.length - 1]);//配列の最後の要素にアクセスするには配列の変数名.length-1で出力する。つまり"three"
 console.log(arr.at(-1));//length -1と一緒、つまりthree
+console.log(Array.isArray(arr));//arrが配列かどうかを調べる。配列ならtrue
