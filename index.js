@@ -557,3 +557,10 @@ const [first, second, third] = arr;
 console.log(first);  //"one"
 console.log(second); //"two"
 console.log(third);  //"three"
+
+// インデックスを出力したい
+const gengo = ["Java", "JavaScript", "Ruby", "JavaScript"];
+const A = gengo.indexOf("JavaScript");
+console.log(A);//先頭から探して最初に見つかった”JavaScript”のインデックスを出力する→1
+const B = gengo.lastIndexOf("JavaScript");
+console.log(B);//末尾から探して最初に見つかった”JavaScript”のインデックスを出力する→3
