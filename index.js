@@ -546,9 +546,14 @@ const ma = [
 console.log(ma[0][0]);//この場合は配列の中の配列(2次元配列)の中の0を出力する。つまりa
 
 //ほらね！！出てきたっしょ！！！だと思ったよ！配列.length→これいきなり出てきてマジ意味わかんなかったもん！！未来のチャプターでやることを説明なしにいきなり使うのほんとやめてほしい
-// 
 const arr = ["one", "two", "three"];
 console.log(arr.length); //配列の数が出力される。つまり3
 console.log(arr[arr.length - 1]);//配列の最後の要素にアクセスするには配列の変数名.length-1で出力する。つまり"three"
 console.log(arr.at(-1));//length -1と一緒、つまりthree
 console.log(Array.isArray(arr));//arrが配列かどうかを調べる。配列ならtrue
+
+//インデックスの値を変数といて定義し直す場合は左辺に書く。そうすれば分割代入ができる
+const [first, second, third] = arr;
+console.log(first);  //"one"
+console.log(second); //"two"
+console.log(third);  //"three"
