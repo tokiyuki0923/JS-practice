@@ -395,7 +395,7 @@ for (let i = 0; i < 10; i++) {
 console.log(total);
 
 
-// やばい。本格的にわからないやつ出てきた。numbers.lengthって何よ。一旦保留！
+// 前回わからなかった配列.lengthは配列の値の数を出力する。
 function sum(numbers) {
     let total = 0;
     for (let i = 0; i < numbers.length; i++) {
@@ -405,7 +405,7 @@ function sum(numbers) {
 }
 
 console.log(sum([1, 2, 3, 4, 5]));
-// 上と同じ処理だけど俺は何がわかってないんだ？
+
 function sum(numbers) {
     let total = 0;
     numbers.forEach(num => {
@@ -413,7 +413,7 @@ function sum(numbers) {
     });
     return total;
 }
-// 配列がわかっていないからここに書かれていることがわからないのか？？？一旦配列のセクションに行くまで保留かな
+
 console.log(sum([1, 2, 3, 4, 5]));
 
 // 配列にはfilterメソッドがある。下記の場合は2で割った時に余りがゼロになる数字（つまり10.20）のみを配列として出力する。名前の通りフィルターにかけている
@@ -586,3 +586,13 @@ console.log(B);//末尾から探して最初に見つかった”JavaScript”�
 // 今後、都度見直していく
 
 // チャプター「文字列」終了
+
+// チャプター「関数とスコープ」開始
+// 変数の名前や関数などの参照できる範囲を決めるもの
+function fn() {
+    const x = 1;
+    console.log(x);
+}
+fn();
+// fn関数のスコープ外から`x`は参照できないためエラー
+console.log(x);
