@@ -715,3 +715,15 @@ class MyClas { };
 const myClassAnother = new MyClas();
 // myClassAnotherはMyclasのインスタンスならtrueを出力する
 console.log(myClassAnother instanceof MyClas);
+
+
+// んーーーーー、、、まあ何が行われているかっていうのはなんとなくわかるんだけど。thisでインスタンスを作る理由がよくわからない。って思ったけどconstructorに直接代入するってことができないからわざわざインスタンスを作ってるのか？
+class Point {
+    constructor(x, y) {
+        this.x = x;
+        this.y = y;
+    }
+}
+const point = new Point(3, 4);
+console.log(point.x)
+console.log(point.y)
