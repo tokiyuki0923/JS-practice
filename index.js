@@ -395,7 +395,7 @@ for (let i = 0; i < 10; i++) {
 console.log(total);
 
 
-// やばい。本格的にわからないやつ出てきた。numbers.lengthって何よ。一旦保留！
+// 前回わからなかった配列.lengthは配列の値の数を出力する。
 function sum(numbers) {
     let total = 0;
     for (let i = 0; i < numbers.length; i++) {
@@ -405,7 +405,7 @@ function sum(numbers) {
 }
 
 console.log(sum([1, 2, 3, 4, 5]));
-// 上と同じ処理だけど俺は何がわかってないんだ？
+
 function sum(numbers) {
     let total = 0;
     numbers.forEach(num => {
@@ -413,7 +413,7 @@ function sum(numbers) {
     });
     return total;
 }
-// 配列がわかっていないからここに書かれていることがわからないのか？？？一旦配列のセクションに行くまで保留かな
+
 console.log(sum([1, 2, 3, 4, 5]));
 
 // 配列にはfilterメソッドがある。下記の場合は2で割った時に余りがゼロになる数字（つまり10.20）のみを配列として出力する。名前の通りフィルターにかけている
@@ -580,3 +580,82 @@ console.log(B);//末尾から探して最初に見つかった”JavaScript”�
 
 // チャプター「配列」終了
 // チャプター「文字列」開始
+
+// 知っていることが多かった
+// 知らないメソッドもたくさんあったが、それを全部確認していたら時間がかかりすぎると判断。大体こういうことができるという把握はした。
+// 今後、都度見直していく
+
+// チャプター「文字列」終了
+
+// チャプター「関数とスコープ」開始
+// 変数の名前や関数などの参照できる範囲を決めるもの
+function fn() {
+    const x = 1;
+    // fn関数のスコープ内から`x`は参照できる
+    console.log(x); // => 1
+}
+fn();
+// fn関数のスコープ外から`x`は参照できないためエラーが起こる
+
+function fn(arg) {
+    console.log(arg);
+}
+fn(15);
+// つまり、スコープ内でconsole.logをやっても出力されないからそれを引き出すには　関数名(仮引数に入れる値);とやらないといけないってことかな
+
+function fnfn() {
+    const qqq = 1;
+    console.log(qqq);
+}
+fnfn();
+function fnfnfn() {
+    const qqq = 99;
+    console.log(qqq)
+}
+fnfnfn();
+// おーー、関数が別ならconstでも同じ変数を宣言できるのか！！
+
+// ビルトインオブジェクトは二種類ある、ECMAScriptに定義されているものと実行環境に定義されているもの。
+
+function fn() {
+    // 内側のスコープにあるはずの変数`x`が参照できる
+    console.log(x); // => undefined
+    {
+        var x = "varのx";
+    }
+    console.log(x); // => "varのx"
+}
+fn();
+
+/*  上記のコードはこのように解釈されている
+function fn() {
+    // もっとも近い関数スコープの先頭に宣言部分が巻き上げられる
+    var x;
+    console.log(x); // => undefined
+    {
+        // 変数への代入はそのままの位置に残る
+        x = "varのx";
+    }
+    console.log(x); // => "varのx"
+}
+fn(); */
+
+//つまり、varの宣言部分はブロックスコープ等を無視して、最も近い関数に巻き上げられてしまう。そして代入部分の位置は変わらないため、意図しない挙動が起こる可能性がある。 
+
+// 無名関数を宣言 + 実行を同時に行っている。これを即時実行関数（IIFE　Immediately-Invoked Function Expression）という
+(function () {
+    // 関数のスコープ内でfoo変数を宣言している
+    var foo = "foo";
+    console.log(foo); // => "foo"
+})();
+// このすぐ閉じている()で無名関数を呼び出している。そして;で終了している
+console.log(typeof foo === "undefined"); // => true
+// あーconst,letがあるから今は即時実行関数はいらんのか。なるへそ
+/* まとめ
+関数やブロックはスコープを持つ
+スコープはネストできる
+もっとも外側にはグローバルスコープがある
+スコープチェーンは内側から外側のスコープへと順番に変数が定義されているか探す仕組みのこと
+varキーワードでの変数宣言やfunctionでの関数宣言では巻き上げが発生する
+クロージャーは静的スコープとメモリ管理の仕組みからなる関数が持つ性質 */
+// チャプター「関数とスコープ」終了
