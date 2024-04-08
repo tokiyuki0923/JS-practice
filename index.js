@@ -697,3 +697,13 @@ console.log(perso.sayName());
 // ん？？？つまり、これでエラーが起こるのは同じオブジェクトではないのに呼び出そうとしているからではないのか？？そんなに難しい話か？俺の解釈が間違ってるのか？？
 const say = perso.sayName;
 console.log(say());
+
+// あーやばい、何が起きているのかがさっぱりわからない、仮説も立たないここの理解一回諦めた方がいいかも。進まなくなっちゃう
+function sayyyy(message) {
+    return `${message} ${this.fullName}!`;
+}
+const son = {
+    fullName: "Brendan Eich"
+};
+// `this`を`son`にして`sayyyy`関数を呼びだす
+console.log(sayyyy.call(son, "こんにちは"));
