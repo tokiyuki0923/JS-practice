@@ -1,7 +1,7 @@
 console.log("/////")
 console.log("start")
 console.log("/////")
-
+"use strict";
 
 
 // UTF-16のコードで「おなかすいた」と表示させたい。文字コードはChatGPTで聞きました。expected output:おなかすいた
@@ -659,3 +659,53 @@ console.log(typeof foo === "undefined"); // => true
 varキーワードでの変数宣言やfunctionでの関数宣言では巻き上げが発生する
 クロージャーは静的スコープとメモリ管理の仕組みからなる関数が持つ性質 */
 // チャプター「関数とスコープ」終了
+
+// チャプター「関数とthis」開始
+// globalthisはブラウザではwindowオブジェクトを、Node.jsではglobalオブジェクトを出力する
+console.log(globalThis);
+
+// 今までの復習「関数」は以下の三つのやり方で定義する
+/*
+・ `function`キーワードからはじめる関数宣言
+function fn1() {}
+・ `function`を式として扱う関数式
+const fn2 = function() {};
+・ Arrow Functionを使った関数式
+const fn3 = () => {};
+ */
+
+// thisはメソッドでのみ使用する←これめちゃくちゃ大事！！！！！！！！！！！！！！！！！！！！！！！！！！
+// thisはベースオブジェクトを参照する
+// つまり以下のようなことができる
+const person = {
+    fullName: "Brendan Eich",
+    sayName: function () {
+        // `person.fullName`と書いているのと同じ
+        return this.fullName;
+    }
+};
+console.log(person.sayName());
+
+
+const perso = {
+    fullName: "Brendan Eich",
+    sayName: function () {
+        return this.fullName;
+    }
+};
+console.log(perso.sayName());
+// ん？？？つまり、これでエラーが起こるのは同じオブジェクトではないのに呼び出そうとしているからではないのか？？そんなに難しい話か？俺の解釈が間違ってるのか？？
+const say = perso.sayName;
+console.log(say());
+
+// あーやばい、何が起きているのかがさっぱりわからない、仮説も立たないここの理解一回諦めた方がいいかも。進まなくなっちゃう
+function sayyyy(message) {
+    return `${message} ${this.fullName}!`;
+}
+const son = {
+    fullName: "Brendan Eich"
+};
+// `this`を`son`にして`sayyyy`関数を呼びだす
+console.log(sayyyy.call(son, "こんにちは"));
+// もうだめだ、thisに関してはマジで意味わからんかった、、、今日はあまり集中できていないというのもあってここを理解し切れるとは思えない状況なので一旦理解は後回しにする
+// チャプター「関数とthis」終了
