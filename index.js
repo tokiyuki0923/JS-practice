@@ -685,3 +685,15 @@ const person = {
     }
 };
 console.log(person.sayName());
+
+
+const perso = {
+    fullName: "Brendan Eich",
+    sayName: function () {
+        return this.fullName;
+    }
+};
+console.log(perso.sayName());
+// ん？？？つまり、これでエラーが起こるのは同じオブジェクトではないのに呼び出そうとしているからではないのか？？そんなに難しい話か？俺の解釈が間違ってるのか？？
+const say = perso.sayName;
+console.log(say());
