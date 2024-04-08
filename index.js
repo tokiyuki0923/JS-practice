@@ -665,7 +665,7 @@ varキーワードでの変数宣言やfunctionでの関数宣言では巻き上
 console.log(globalThis);
 
 // 今までの復習「関数」は以下の三つのやり方で定義する
-/* 
+/*
 ・ `function`キーワードからはじめる関数宣言
 function fn1() {}
 ・ `function`を式として扱う関数式
@@ -673,3 +673,5 @@ const fn2 = function() {};
 ・ Arrow Functionを使った関数式
 const fn3 = () => {};
  */
+
+// thisはメソッドでのみ使用する←これめちゃくちゃ大事！！！！！！！！！！！！！！！！！！！！！！！！！！
