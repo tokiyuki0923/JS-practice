@@ -743,3 +743,28 @@ const counterB = new Counter();
 counterA.increment();
 console.log(counterA.count);
 console.log(counterB.count);
+
+
+
+// やばい、全くわからへん。thisが出てくると思考が停止してしまう。明日もう一度見てみる
+class NumberWrapper {
+    constructor(value) {
+        this._value = value;
+    }
+    get value() {
+        console.log("getter");
+        return this._value;
+    }
+    set value(newValue) {
+        console.log("setter");
+        this._value = newValue;
+    }
+}
+
+const numberWrapper = new NumberWrapper(1);
+
+console.log(numberWrapper.value);
+
+numberWrapper.value = 42;
+
+console.log(numberWrapper.value);
