@@ -661,3 +661,5 @@ varキーワードでの変数宣言やfunctionでの関数宣言では巻き上
 // チャプター「関数とスコープ」終了
 
 // チャプター「関数とthis」開始
+// globalthisはブラウザではwindowオブジェクトを、Node.jsではglobalオブジェクトを出力する
+console.log(globalThis);
