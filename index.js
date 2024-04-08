@@ -1,7 +1,7 @@
 console.log("/////")
 console.log("start")
 console.log("/////")
-
+"use strict";
 
 
 // UTF-16のコードで「おなかすいた」と表示させたい。文字コードはChatGPTで聞きました。expected output:おなかすいた
