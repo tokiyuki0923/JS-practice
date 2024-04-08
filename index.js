@@ -641,3 +641,12 @@ function fn() {
 fn(); */
 
 //つまり、varの宣言部分はブロックスコープ等を無視して、最も近い関数に巻き上げられてしまう。そして代入部分の位置は変わらないため、意図しない挙動が起こる可能性がある。 
+
+// 無名関数を宣言 + 実行を同時に行っている。これを即時実行関数（IIFE　Immediately-Invoked Function Expression）という
+(function () {
+    // 関数のスコープ内でfoo変数を宣言している
+    var foo = "foo";
+    console.log(foo); // => "foo"
+})();
+// このすぐ閉じている()で無名関数を呼び出している。そして;で終了している
+console.log(typeof foo === "undefined"); // => true
