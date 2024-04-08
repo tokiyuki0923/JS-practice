@@ -727,3 +727,19 @@ class Point {
 const point = new Point(3, 4);
 console.log(point.x)
 console.log(point.y)
+
+
+class Counter {
+    constructor() {
+        this.count = 0;
+    }
+    increment() {
+        this.count++;
+    }
+}
+const counterA = new Counter();
+const counterB = new Counter();
+// つまり、counterB.increment();と書けばcounterB.countも1になる
+counterA.increment();
+console.log(counterA.count);
+console.log(counterB.count);
