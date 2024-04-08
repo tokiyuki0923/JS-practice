@@ -591,8 +591,8 @@ console.log(B);//末尾から探して最初に見つかった”JavaScript”�
 // 変数の名前や関数などの参照できる範囲を決めるもの
 function fn() {
     const x = 1;
-    console.log(x);
+    // fn関数のスコープ内から`x`は参照できる
+    console.log(x); // => 1
 }
 fn();
-// fn関数のスコープ外から`x`は参照できないためエラー
-console.log(x);
+// fn関数のスコープ外から`x`は参照できないためエラーが起こる
