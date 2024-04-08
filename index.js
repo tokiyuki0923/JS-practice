@@ -711,3 +711,7 @@ console.log(sayyyy.call(son, "こんにちは"));
 // チャプター「関数とthis」終了
 
 // チャプター「クラス」開始
+class MyClas { };
+const myClassAnother = new MyClas();
+// myClassAnotherはMyclasのインスタンスならtrueを出力する
+console.log(myClassAnother instanceof MyClas);
