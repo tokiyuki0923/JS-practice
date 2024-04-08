@@ -675,3 +675,13 @@ const fn3 = () => {};
  */
 
 // thisはメソッドでのみ使用する←これめちゃくちゃ大事！！！！！！！！！！！！！！！！！！！！！！！！！！
+// thisはベースオブジェクトを参照する
+// つまり以下のようなことができる
+const person = {
+    fullName: "Brendan Eich",
+    sayName: function () {
+        // `person.fullName`と書いているのと同じ
+        return this.fullName;
+    }
+};
+console.log(person.sayName());
