@@ -602,3 +602,15 @@ function fn(arg) {
 }
 fn(15);
 // つまり、スコープ内でconsole.logをやっても出力されないからそれを引き出すには　関数名(仮引数に入れる値);とやらないといけないってことかな
+
+function fnfn() {
+    const qqq = 1;
+    console.log(qqq);
+}
+fnfn();
+function fnfnfn() {
+    const qqq = 99;
+    console.log(qqq)
+}
+fnfnfn();
+// おーー、関数が別ならconstでも同じ変数を宣言できるのか！！
