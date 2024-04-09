@@ -772,7 +772,27 @@ console.log(numberWrapper.value);
 
 // んーーーー、一度lengthやっちゃうと、それ以降にインデックスの数を変えても表示されなくなってしまうってことなのかな
 const jijiji = [1, 2, 3, 4, 5, 6];
-jijiji.length = 3;
+jijiji.length = 8;
 console.log(jijiji);
-jijiji.length = 5;
-console.log(jijiji);
+
+// こんな簡単なことすらよくわかっていない、なんでこれで2回Hello!って表示されるのか。
+// 関数を2回実行する関数！！
+function doTwice(func) {
+    func(); // 1回目！
+    func(); // 2回目！
+}
+
+// あいさつするだけの関数
+function hello() {
+    console.log('Hello!');
+}
+
+// あいさつを2回実行する
+doTwice(hello);
+
+
+
+// 
+/* thisについてのまとめ
+グローバルコンテキスト内でのthisはグローバルオブジェクトを参照する
+*/
