@@ -768,3 +768,11 @@ console.log(numberWrapper.value);
 numberWrapper.value = 42;
 
 console.log(numberWrapper.value);
+// 外から直接読み書きしてほしくないプライベートなプロパティは「_」から始まるという慣習があった。構文としての意味はない。現在は＃をプロパティの前につける。
+
+// んーーーー、一度lengthやっちゃうと、それ以降にインデックスの数を変えても表示されなくなってしまうってことなのかな
+const jijiji = [1, 2, 3, 4, 5, 6];
+jijiji.length = 3;
+console.log(jijiji);
+jijiji.length = 5;
+console.log(jijiji);
