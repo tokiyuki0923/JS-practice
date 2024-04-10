@@ -815,5 +815,17 @@ class ConflictClass {
 }
 
 const conflict = new ConflictClass();
+// この場合はインスタンスオブジェクトのmethodが出力される
 conflict.method();
 
+
+// インスタンス作成時にインスタンスの[[Prototype]]内部プロパティへプロトタイプオブジェクトの参照を保存する
+// インスタンスからプロパティ（またはメソッド）を参照するときに、[[Prototype]]内部プロパティまで探索する
+class MeClass {
+    method() {
+        console.log("プロトタイプのメソッド");
+    }
+}
+const instance = new MeClass();
+// 変数名instanceのメソッドは定義していないのに、これでプロトタイプメソッドが呼び出される
+instance.method(); 
