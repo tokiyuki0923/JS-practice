@@ -841,3 +841,5 @@ class Child extends Parent {
 }
 const insta = new Child();
 console.log(insta.field);
+// チャプター「クラス」終了
+
