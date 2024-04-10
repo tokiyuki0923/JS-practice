@@ -822,11 +822,22 @@ conflict.method();
 // インスタンス作成時にインスタンスの[[Prototype]]内部プロパティへプロトタイプオブジェクトの参照を保存する
 // インスタンスからプロパティ（またはメソッド）を参照するときに、[[Prototype]]内部プロパティまで探索する
 // なるほど、これではプロトタイプメソッドが呼び出されない。なぜならconstructorを使用していないから。さっきの話はconstructorオブジェクトを省略できますよって話なのか
-const MeClass = {
+class MeClass {
     method() {
         console.log("プロトタイプのメソッド");
     }
 }
 const instance = new MeClass();
 // 変数名instanceのメソッドは定義していないのに、これでプロトタイプメソッドが呼び出される
-instance.method(); 
+instance.method();
+
+// extendsを使えば親要素を以下のように引き継げる
+// 親と子クラスで同じfield名が定義されている場合は子のfieldが優先されている。この場合は「子クラスで定義したフィールド」が出力される
+class Parent {
+    field = "親クラスで定義したフィールド";
+}
+class Child extends Parent {
+    field = "子クラスで定義したフィールド";
+}
+const insta = new Child();
+console.log(insta.field);
