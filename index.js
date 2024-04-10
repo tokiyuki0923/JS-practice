@@ -790,9 +790,30 @@ function hello() {
 // あいさつを2回実行する
 doTwice(hello);
 
+// これのフルネームを表示するには？
+let user = {
+    firstName: "John",
+    lastName: "Doe",
+    get fullName() {
+        return `${this.firstName} ${this.lastName}`;
+    },
+};
+
+console.log(user.fullName);
 
 
-// 
-/* thisについてのまとめ
-グローバルコンテキスト内でのthisはグローバルオブジェクトを参照する
-*/
+// 以下の場合はインスタンスオブジェクトに定義したメソッドが出力される。
+class ConflictClass {
+    // インスタンスオブジェクトにmethodを定義
+    method = () => {
+        console.log("インスタンスオブジェクトのメソッド");
+    };
+    // クラスのプロトタイプメソッドとしてmethodを定義
+    method() {
+        console.log("プロトタイプのメソッド");
+    }
+}
+
+const conflict = new ConflictClass();
+conflict.method();
+
